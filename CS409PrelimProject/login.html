@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crownwell University Portal</title>
+    <link rel="stylesheet" href="loginStyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--Login Form -->
+      <div class="form-box active" id="login-form">
+        <form id="loginForm">
+          <h2>Login</h2>
+          <p id="loginError" style="color: red"></p>
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <!--Password input-->
+          <button type="submit">Login</button>
+          <!--Login button-->
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showForm('register-form')">Register</a>
+            <!--Switch to Register form-->
+          </p>
+        </form>
+      </div>
+
+      <!--Register form-->
+      <div class="form-box" id="register-form">
+        <form id="registerForm">
+          <h2>Register</h2>
+          <p id="registerError" style="color: red"></p>
+
+          <input type="text" id="name" placeholder="Full Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <!--Password-->
+          <input type="date" id="birthday" required />
+          <input type="text" id="age" placeholder="Age" readonly />
+          <input
+            type="number"
+            id="gwa"
+            step="0.01"
+            placeholder="GWA"
+            required
+          />
+          <input
+            type="text"
+            id="guardianName"
+            placeholder="Guardian's Name"
+            required
+          />
+          <input
+            type="tel"
+            id="guardianPhone"
+            placeholder="Guardian's Phone"
+            required
+          />
+          <!--File Uploads-->
+          <label>1x1 Picture:</label>
+          <input type="file" id="picture" accept="image/*" required />
+          <label>Grade Card Certificate:</label>
+          <input
+            type="file"
+            name="grade_card"
+            accept=".jpg,.jpeg,.png,.pdf"
+            required
+          />
+
+          <!--Role Selection-->
+          <select name="role" required>
+            <option value="">- - Select Role - -</option>
+            <option value="user">Student</option>
+            <option value="admin">Admin</option>
+          </select>
+
+          <!--Program Selection-->
+          <label for="program">Select Your Program:</label>
+          <select id="program" required>
+            <option value="">-- Select Program --</option>
+            <option value="BSCS">
+              Bachelor of Science in Computer Science
+            </option>
+            <option value="BAECON">Bachelor of Arts in Economics</option>
+            <option value="BBA">Bachelor of Business Administration</option>
+            <option value="BE">Bachelor of Engineering</option>
+            <option value="BFA">Bachelor of Fine Arts</option>
+            <option value="BSN">Bachelor of Science in Nursing</option>
+            <option value="MBA">Master of Business Administration</option>
+            <option value="MSDA">Master of Science in Data Analytics</option>
+            <option value="MAEDUC">Master of Arts in Education</option>
+            <option value="MPH">Master of Public Health</option>
+            <option value="PHD">Doctor of Philosophy</option>
+          </select>
+
+          <button type="submit">Register</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="showForm('login-form')">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
